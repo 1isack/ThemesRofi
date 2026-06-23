@@ -11,5 +11,22 @@ A repository for themes for the app menu rofi dmenu
 ▐▌ ▐▌▝█▄█▘ ▐▌  ▗▄█▄▖       █  ▐▌ ▐▌▝█▄▄▌▐▌█▐▌▝█▄▄▌▐▄▄▟▌
 ▝▘ ▝▀ ▝▀▘  ▝▘  ▝▀▀▀▘       ▀  ▝▘ ▝▘ ▝▀▀ ▝▘▀▝▘ ▝▀▀  ▀▀▀ 
                                                        
-                                                       
 </pre>
+
+## Previews
+
+| Theme | Preview |
+| :--- | :--- |
+| Theme 1 | ![Theme 1](previws/shot_20260623_174820.png) |
+| Theme 2 | ![Theme 2](previws/shot_20260623_174910.png) |
+| Theme 3 | ![Theme 3](previews/shot_20260623_174927.png) |
+| Theme 4 | ![Theme 4](previws/shot_20260623_174946.png) |
+| Theme 5 | ![Theme 5](previws/shot_20260623_175002.png) |
+| Theme 6 | ![Theme 6](previws/shot_20260623_175020.png) |
+| Theme 7 | ![Theme 7](previws/shot_20260623_175036.png) |
+| Theme 8 | ![Theme 8](previws/shot_20260623_175058.png) |
+| Theme 9 | ![Theme 9](previws/shot_20260623_175118.png) |
+| Theme 10 | ![Theme 10](previws/shot_20260623_175301.png) |
+| Theme 11 | ![Theme 11](previws/shot_20260623_175318.png) |
+| Theme 12 | ![Theme 12](previws/shot_20260623_175424.png) |
+| Theme 13 | ![Theme 13](previws/shot_20260623_175452.png) |
