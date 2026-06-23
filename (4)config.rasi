@@ -1,0 +1,41 @@
+configuration {
+    modi: "drun";
+    font: "JetBrains Mono 14";
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    color5: #888888;
+    bg: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    text-color: #ffffff;
+}
+
+window {
+    background-color: @bg;
+    width: 400px;
+    padding: 20px;
+}
+
+inputbar {
+    margin: 0px 0px 20px 0px;
+    children: [ entry ];
+}
+
+entry {
+    placeholder: "Search...";
+    text-color: @color5;
+}
+
+listview {
+    lines: 6;
+}
+
+element {
+    padding: 5px;
+}
+
+element selected {
+    text-color: @color5;
+}
