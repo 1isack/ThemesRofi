@@ -6,7 +6,7 @@ configuration {
 }
 
 @theme "/dev/null"
-@import "/home/isaak/.cache/wal/colors-rofi-dark.rasi"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
     bg: rgba(0, 0, 0, 0.7);
