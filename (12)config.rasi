@@ -1,0 +1,84 @@
+configuration {
+    modi:                "drun";
+    font:                "JetBrains Mono 12";
+    show-icons:          false;
+    drun-display-format: "{name}";
+}
+@theme "/dev/null"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    bg:          rgba(0, 0, 0, 0.6);
+    fg:          @foreground;
+    selected-bg: @color5;
+    selected-fg: @background;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    background-color: @bg;
+    border:           none;
+    border-radius:    15px;
+    width:            700px;
+    height:           420px;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    orientation:      horizontal;
+    spacing:          0px;
+    padding:          0px;
+    children:         [ content, imagebox ];
+}
+
+content {
+    orientation:      vertical;
+    spacing:          10px;
+    padding:          15px;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @color0;
+    border-radius:    12px;
+    padding:          8px 12px;
+    margin:           0px 0px 10px 0px;
+    children:         [ entry ];
+}
+
+entry {
+    text-color:  @fg;
+    placeholder: "Search...";
+}
+
+listview {
+    lines:        8;
+    columns:      1;
+    fixed-height: true;
+    scrollbar:    false;
+}
+
+element {
+    padding:       8px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+imagebox {
+    padding:          20px;
+    background-color: transparent;
+    background-image: url("~/.config/rofi/images/paper.jpg", height);
+    width:            220px;
+    border-radius:    0px 15px 15px 0px;
+}
