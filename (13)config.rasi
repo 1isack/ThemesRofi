@@ -1,0 +1,82 @@
+configuration {
+    modi:                "drun";
+    font:                "JetBrains Mono 12";
+    show-icons:          false;
+    drun-display-format: "{name}";
+}
+@theme "/dev/null"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    bg:          rgba(0, 0, 0, 0.85);
+    fg:          @foreground;
+    selected-bg: @color5;
+    selected-fg: @background;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    background-color: @bg;
+    border:           none;
+    border-radius:    0px;
+    fullscreen:       true;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    orientation:      horizontal;
+    spacing:          0px;
+    padding:          0px;
+    children:         [ imagebox, content ];
+}
+
+imagebox {
+    padding:          20px;
+    background-color: transparent;
+    background-image: url("~/.config/rofi/images/paper.jpg", height);
+    width:            40%;
+}
+
+content {
+    orientation:      vertical;
+    spacing:          30px;
+    padding:          80px 60px;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @color0;
+    border-radius:    12px;
+    padding:          8px 12px;
+    margin:           0px 0px 10px 0px;
+    children:         [ entry ];
+}
+
+entry {
+    text-color:  @fg;
+    placeholder: "Search...";
+}
+
+listview {
+    lines:        10;
+    columns:      1;
+    fixed-height: true;
+    scrollbar:    false;
+}
+
+element {
+    padding:       8px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+
+element-text {
+    text-color: inherit;
+}
