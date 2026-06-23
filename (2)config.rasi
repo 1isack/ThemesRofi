@@ -1,0 +1,52 @@
+configuration {
+    modi: "drun";
+    font: "JetBrains Mono 12";
+    show-icons: false;
+    drun-display-format: "{name}";
+}
+
+@theme "/dev/null"
+@import "/home/isaak/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    bg: rgba(0, 0, 0, 0.7);
+    fg: @foreground;
+    selected-bg: @color5;
+    selected-fg: @background;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    background-color: @bg;
+    border: none;
+    border-radius: 15px;
+    width: 600px;
+    padding: 20px;
+}
+
+mainbox { children: [ inputbar, listview ]; }
+
+inputbar {
+    background-color: @color0;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 0px 0px 15px 0px;
+}
+
+listview {
+    lines: 3;
+    columns: 3;
+    spacing: 10px;
+}
+
+element {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: @color8;
+}
+
+element selected {
+    background-color: @selected-bg;
+    text-color: @selected-fg;
+}
