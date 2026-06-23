@@ -1,0 +1,116 @@
+configuration {
+    modi:                "drun";
+    font:                "JetBrains Mono 12";
+    show-icons:          true;
+    display-drun:        "";
+    drun-display-format: "{name}";
+}
+@theme "/dev/null"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    bg:          rgba(0, 0, 0, 0.6);
+    fg:          @foreground;
+    selected-bg: @color5;
+    selected-fg: @background;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    background-color: @bg;
+    border:           none;
+    border-radius:    15px;
+    width:            700px;
+    height:           420px;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    orientation:      horizontal;
+    spacing:          0px;
+    padding:          0px;
+    background-color: transparent;
+    children:         [ imagebox, content ];
+}
+
+imagebox {
+    padding:          20px;
+    background-color: transparent;
+    background-image: url("~/.config/rofi/images/paper.jpg", height);
+    width:            220px;
+    border-radius:    15px 0px 0px 15px;
+}
+
+content {
+    orientation:      vertical;
+    spacing:          10px;
+    padding:          15px;
+    background-color: transparent;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @color0;
+    border-radius:    10px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @color5;
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color:  transparent;
+    text-color:        @fg;
+    placeholder:       "Search...";
+    placeholder-color: @color8;
+}
+
+listview {
+    columns:          1;
+    lines:            8;
+    scrollbar:        false;
+    fixed-height:     true;
+    spacing:          2px;
+    background-color: transparent;
+}
+
+element {
+    padding:          7px 10px;
+    border-radius:    8px;
+    spacing:          10px;
+    background-color: transparent;
+    text-color:       @fg;
+    orientation:      horizontal;
+    cursor:           pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             22px;
+    cursor:           inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    cursor:           inherit;
+}
