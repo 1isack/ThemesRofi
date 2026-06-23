@@ -1,0 +1,39 @@
+configuration {
+    modi: "drun";
+    font: "JetBrains Mono 12";
+    show-icons: false;
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    color5: #888888;
+    background: #000000;
+    background-color: transparent;
+    text-color: #ffffff;
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 250px;
+    height: 100%;
+    location: west;
+    anchor: west;
+    border: 0px 2px 0px 0px;
+    border-color: @color5;
+}
+
+listview {
+    padding: 20px;
+    spacing: 5px;
+}
+
+element {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+element selected {
+    background-color: @color5;
+    text-color: @background;
+}
