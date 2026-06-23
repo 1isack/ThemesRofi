@@ -1,8 +1,7 @@
 configuration {
     modi:                "drun";
     font:                "JetBrains Mono 12";
-    show-icons:          true;
-    display-drun:        "";
+    show-icons:          false;
     drun-display-format: "{name}";
 }
 @theme "/dev/null"
@@ -32,7 +31,6 @@ mainbox {
     orientation:      horizontal;
     spacing:          0px;
     padding:          0px;
-    background-color: transparent;
     children:         [ imagebox, content ];
 }
 
@@ -48,69 +46,39 @@ content {
     orientation:      vertical;
     spacing:          10px;
     padding:          15px;
-    background-color: transparent;
     children:         [ inputbar, listview ];
 }
 
 inputbar {
     background-color: @color0;
-    border-radius:    10px;
+    border-radius:    12px;
     padding:          8px 12px;
-    spacing:          8px;
-    children:         [ prompt, entry ];
-}
-
-prompt {
-    background-color: transparent;
-    text-color:       @color5;
-    vertical-align:   0.5;
+    margin:           0px 0px 10px 0px;
+    children:         [ entry ];
 }
 
 entry {
-    background-color:  transparent;
     text-color:        @fg;
     placeholder:       "Search...";
-    placeholder-color: @color8;
 }
 
 listview {
-    columns:          1;
-    lines:            8;
-    scrollbar:        false;
-    fixed-height:     true;
-    spacing:          2px;
-    background-color: transparent;
+    lines:        8;
+    columns:      1;
+    fixed-height: true;
+    scrollbar:    false;
 }
 
 element {
-    padding:          7px 10px;
-    border-radius:    8px;
-    spacing:          10px;
-    background-color: transparent;
-    text-color:       @fg;
-    orientation:      horizontal;
-    cursor:           pointer;
+    padding:       8px;
+    border-radius: 8px;
 }
 
-element normal.normal {
-    background-color: transparent;
-    text-color:       @fg;
-}
-
-element selected.normal {
+element selected {
     background-color: @selected-bg;
     text-color:       @selected-fg;
 }
 
-element-icon {
-    background-color: transparent;
-    size:             22px;
-    cursor:           inherit;
-}
-
 element-text {
-    background-color: transparent;
-    text-color:       inherit;
-    vertical-align:   0.5;
-    cursor:           inherit;
+    text-color: inherit;
 }
