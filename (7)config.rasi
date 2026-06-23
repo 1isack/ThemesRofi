@@ -1,0 +1,77 @@
+configuration {
+    modi: "drun";
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: false;
+}
+
+@theme "/dev/null"
+@import "/home/isaak/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+window {
+    background-color: @background;
+    border: 1px solid;
+    border-color: @color4;
+    border-radius: 8px;
+    width: 480px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    padding: 12px;
+    spacing: 8px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @color0;
+    border: 1px solid;
+    border-color: @color4;
+    border-radius: 6px;
+    padding: 8px 12px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @color4;
+}
+
+entry {
+    placeholder: "Buscar...";
+    placeholder-color: @color8;
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    scrollbar: false;
+    spacing: 2px;
+}
+
+element {
+    border-radius: 4px;
+    padding: 8px 12px;
+    spacing: 10px;
+    children: [ element-text ];
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @color4;
+    text-color: #ffffff;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}
