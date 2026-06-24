@@ -22,8 +22,10 @@ FILE_NAME="($choice)config.rasi"
 
 if [ ! -d "$DEST_DIR" ]; then
     mkdir -p "$DEST_DIR"
-else
-    rm -rf "$DEST_DIR"/*
+fi
+
+if [ -f "$DEST_DIR/config.rasi" ]; then
+    rm "$DEST_DIR/config.rasi"
 fi
 
 if [ -f "$SOURCE_DIR/$FILE_NAME" ]; then
