@@ -30,7 +30,12 @@ fi
 
 if [ -f "$SOURCE_DIR/$FILE_NAME" ]; then
     cp "$SOURCE_DIR/$FILE_NAME" "$DEST_DIR/config.rasi"
-    echo "Success! Theme $choice has been applied as config.rasi"
+   
+    if [ -d "$SOURCE_DIR/images" ]; then
+        cp -r "$SOURCE_DIR/images" "$DEST_DIR/"
+    fi
+    
+    echo "Success! Theme $choice has been applied and images folder copied."
 else
     echo "Error: File $FILE_NAME not found in the repository."
     exit 1
