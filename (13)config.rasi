@@ -36,7 +36,7 @@ mainbox {
 imagebox {
     padding:          20px;
     background-color: transparent;
-    background-image: url("~/.config/rofi/images/paper.jpg", height);
+    background-image: url("~/.config/rofi/images/paper.png", height);
     width:            40%;
 }
 
